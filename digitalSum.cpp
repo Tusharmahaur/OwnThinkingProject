@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Iterative function to
-// reverse digits of num
 long long digitalSum(long long int num)
 {
     long long int digiSum = 0;
@@ -10,9 +8,19 @@ long long digitalSum(long long int num)
         digiSum += num % 10;
         num = num / 10;
     }
-    return digiSum;
+
+    if(digiSum>0 && digiSum<=9){
+        return digiSum;
+    }else{
+        long long int temp = 0;
+        while (digiSum >1){
+            temp = temp + digiSum%10;
+            digiSum /= 10;
+        }
+        return temp;
+    }
 }
-// Driver code
+
 int main()
 {
     long long int num = 0;
