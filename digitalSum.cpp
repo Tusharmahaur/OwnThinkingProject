@@ -88,3 +88,56 @@
 
 
 
+#include <iostream>
+using namespace std;
+
+int counter(int num){
+    
+    int count = 0;
+    int digitSum = 0;
+    while(num>0){
+        digitSum += num%10;
+        num /= 10;
+        count++;
+    }
+    return count;
+
+}
+
+
+int main(){
+    long long int num= 0;
+    cout<<"Enter the number : ";
+    cin>>num;
+    int  count = counter(num);
+    
+    // cout<<"loop run in the "<<counter(num)<<" times"<<endl;
+    // cout<<num<<endl;
+
+    
+    //for containing each digit in the arr container 
+    int arr[count];
+    for(int i = 0 ; i<count; i++){
+        arr[i] = num%10;
+        num = num/10;
+    }
+
+    // for(int i = 0; i<count; i++){
+    //     cout<<arr[i]<<" ";
+    // }
+
+    //this loop are finally count to the digital sum 
+    int digitalSum = 0;
+    for(int i = 0 ; i<count ; i++){
+        arr[i+1]= arr[i] + arr[i+1];
+        if(arr[i+1]>9){
+            arr[i+1] = arr[i+1]%9;
+        }
+        digitalSum  = arr[i+1];        
+    }
+
+    cout<<"Digital Sum = "<<digitalSum<<endl;
+
+
+    return 0;
+}
