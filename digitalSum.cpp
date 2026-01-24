@@ -92,7 +92,7 @@
 using namespace std;
 
 int counter(int num){
-    
+    //For counting number of digits
     int count = 0;
     int digitSum = 0;
     while(num>0){
@@ -137,7 +137,6 @@ int main(){
     }
 
     cout<<"Digital Sum = "<<digitalSum<<endl;
-
 
     return 0;
 }
