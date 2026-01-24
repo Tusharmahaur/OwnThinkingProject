@@ -1,45 +1,90 @@
-#include <iostream>
-using namespace std;
+// #include <iostream>
+// using namespace std;
 
-long long digitalSum(long long int num)
-{   
-    long long int digiSum = 0;
-    while (num > 0) {
-        digiSum += num % 10;
-        num = num / 10;
-    }
+// //Function declaration for converting to number in digital Sum
+// long long digitalSum(long long int num)
+// {   
+//     long long int digiSum = 0;
+//     //loop for sum all digits 
+//     while (num > 0) {
+//         digiSum += num % 10;
+//         num = num / 10;
+//     }
 
-    if(digiSum>0 && digiSum<=9){
-        return digiSum;
-    }else{
+//     //for further sum when to output is single digits
+//     if(digiSum>0 && digiSum<=9){
+//         return digiSum;
+//     }else{
+//         //to converting further into single in number 
+//         long long int temp = 0;
+//         while (digiSum >0 ){
+//             temp = temp + digiSum%10;
+//             digiSum =digiSum/10;
+//         }
         
-        long long int temp = 0;
-        while (digiSum >0 ){
-            temp = temp + digiSum%10;
-            digiSum =digiSum/10;
-        }
-        
-        if(temp>0 and temp<=9){
-            return temp;
-        }else{
-            long long int temp1 = 0;
-            while (temp >0 ){
-                temp1 = temp1 + temp%10;
-                temp =temp/10;
-            }
-        }
-    }
-}
+//         //further recheck in this number 
+//         if(temp>0 and temp<=9){
+//             return temp;
+//         }else{
+//             long long int temp1 = 0;
+//             while (temp >0 ){
+//                 temp1 = temp1 + temp%10;
+//                 temp =temp/10;
+//             }
+//         }
+//     }
+// }
 
-int main()
-{
-    long long int num = 0;
-    cout<<"Enter the number is : ";
-    cin>>num;
-    // long long int temp = digiSum(num);
-    if(digitalSum(num)== 0){
-        cout<<"Your Digital Sum is : 0 or 9 "<<endl;
-    }else{
-    cout << "Your Digital Sum is : " <<digitalSum(num)<<endl;}
-    return 0;
-}
+// int main()
+// {
+//     long long int num = 0;
+//     cout<<"Enter the number is : ";
+//     cin>>num;
+//     //To check the condition if fuction return 0 than print the value is 0 or 9
+//     if(digitalSum(num)== 0){
+//         cout<<"Your Digital Sum is : 0 or 9 "<<endl;
+//     }else{
+//         //other wise print the digital sum
+//     cout << "Your Digital Sum is : " <<digitalSum(num)<<endl;
+// }
+//     return 0;
+// }
+
+
+// //second logic to says jese hi two digit ho unko jod ke single digit kar do 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// //Function declaration for converting to number in digital Sum
+
+
+// int main()
+// {
+//     long long int num = 0;
+//     cout<<"Enter the number is : ";
+//     cin>>num;
+    
+//     int digiSum = 0;
+//     int i = 0;
+//     while (num > 0) {
+//         digiSum += num % 10;
+//         num = num / 10;
+//         i++;
+//     }
+//     cout<<"Your number is "<<i<<" digits."<<endl;
+
+//     //Dynamic array for 
+//     // int arr[] = new int[i];
+//     for(int j=0; j<i; j++){
+//         arr[j] = num%10;
+//         num = num/10;
+//     }
+
+    
+
+//     return 0;
+// }
+
+
+
