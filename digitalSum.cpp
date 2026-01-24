@@ -87,7 +87,7 @@
 // }
 
 
-
+//These function is final output to calculate digital sum in any number 
 #include <iostream>
 using namespace std;
 
@@ -101,42 +101,41 @@ int counter(int num){
         count++;
     }
     return count;
-
 }
-
 
 int main(){
     long long int num= 0;
     cout<<"Enter the number : ";
     cin>>num;
-    int  count = counter(num);
+    int count = counter(num);
     
-    // cout<<"loop run in the "<<counter(num)<<" times"<<endl;
-    // cout<<num<<endl;
+    long long int digitalSum = 0;
+    if(count>1){
+        long long int arr[count];
 
-    
-    //for containing each digit in the arr container 
-    int arr[count];
-    for(int i = 0 ; i<count; i++){
-        arr[i] = num%10;
-        num = num/10;
-    }
-
-    // for(int i = 0; i<count; i++){
-    //     cout<<arr[i]<<" ";
-    // }
-
-    //this loop are finally count to the digital sum 
-    int digitalSum = 0;
-    for(int i = 0 ; i<count ; i++){
-        arr[i+1]= arr[i] + arr[i+1];
-        if(arr[i+1]>9){
-            arr[i+1] = arr[i+1]%9;
+        for(int i = 0 ; i<count; i++)
+        {
+            arr[i] = num%10;
+            num = num/10;
         }
-        digitalSum  = arr[i+1];        
+
+        //for printing 
+        for(int i =0; i<count; i++){
+            cout<<arr[i]<<" ";
+        }
+
+        for(int i = 0 ; i<count-1 ; i++)
+        {
+            arr[i+1] = arr[i] + arr[i+1];
+            
+            if(arr[i+1]>9){
+                arr[i+1] = arr[i+1]%9;
+            }
+            digitalSum  = arr[i+1];
+        }
+        cout<<"Digital Sum = "<<digitalSum<<endl;
+    }else{
+        cout<<"Digital Sum = "<<num<<endl;
     }
-
-    cout<<"Digital Sum = "<<digitalSum<<endl;
-
     return 0;
 }
