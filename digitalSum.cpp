@@ -88,52 +88,97 @@
 
 
 //This program to converting any number to digital sum for mathematical approach 
+// #include <iostream>
+// using namespace std;
+
+// //these function for the counting the digits and use call by value
+// int counter(long long int num){
+//     int count = 0;
+//     int digitSum = 0;
+//     while(num>0){
+//         digitSum += num%10;
+//         num /= 10;
+//         count++;
+//     }
+//     return count;
+// }
+
+// int main(){
+//     long long int num= 0;
+//     cout<<"Enter the number : ";
+//     cin>>num;
+//     int count = counter(num);
+    
+    
+//     long long int digitalSum = 0;
+//     //two condition of this approach to when the counter is one or other case when counter is run more than one times.
+//     if(count>1){
+//         long long int arr[count];
+
+//         for(int i = 0 ; i<count; i++)
+//         {
+//             arr[i] = num%10;
+//             num = num/10;
+//         }
+
+//         //this loop run to count-1 times 
+//         for(int i = 0 ; i<count-1 ; i++)
+//         {
+//             arr[i+1] = arr[i] + arr[i+1];
+            
+//             if(arr[i+1]>9){
+//                 arr[i+1] = arr[i+1]%9;
+//             }
+//             digitalSum  = arr[i+1];
+//         }
+//         cout<<"Digital Sum = "<<digitalSum<<endl;
+//     }else{
+//         cout<<"Digital Sum = "<<num<<endl;
+//     }
+//     return 0;
+// }
+
+//for better approach use vector to digital sum 
 #include <iostream>
+#include <vector>
 using namespace std;
 
-//these function for the counting the digits and use call by value
-int counter(long long int num){
-    int count = 0;
-    int digitSum = 0;
+int64_t counter(int64_t num){
+    int32_t count = 0;
+    int digiSum = 0;
     while(num>0){
-        digitSum += num%10;
-        num /= 10;
+        digiSum += num%10;
+        num = num/10;
         count++;
     }
     return count;
 }
 
 int main(){
-    long long int num= 0;
+    int64_t num;
     cout<<"Enter the number : ";
     cin>>num;
-    int count = counter(num);
+    int64_t digits = counter(num);
+    vector <int> vec;
     
-    
-    long long int digitalSum = 0;
-    //two condition of this approach to when the counter is one or other case when counter is run more than one times.
-    if(count>1){
-        long long int arr[count];
+    int temp = 0;
 
-        for(int i = 0 ; i<count; i++)
-        {
-            arr[i] = num%10;
-            num = num/10;
-        }
-
-        //this loop run to count-1 times 
-        for(int i = 0 ; i<count-1 ; i++)
-        {
-            arr[i+1] = arr[i] + arr[i+1];
-            
-            if(arr[i+1]>9){
-                arr[i+1] = arr[i+1]%9;
-            }
-            digitalSum  = arr[i+1];
-        }
-        cout<<"Digital Sum = "<<digitalSum<<endl;
-    }else{
-        cout<<"Digital Sum = "<<num<<endl;
+    for(int i = 0; i<digits;i++){
+        temp = num%10;
+        num = num/10;
+        vec.push_back(temp);
     }
+    
+    int tempDigi = 0;
+    for(int i = 0;i<digits; i++){
+        vec[i+1] = vec[i]+vec[i+1];
+        if(vec[i+1]>9){
+            vec[i+1] = vec[i+1]%9;
+        }
+        tempDigi = vec[i+1];
+    }
+
+    cout<<"Digital Sum = "<<tempDigi<<endl;
     return 0;
 }
+    

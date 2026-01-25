@@ -1,6 +1,1 @@
-
-        // while(start == end){
-        //     swap(arr[start],arr[end])
-        //     start++;
-        //     end--;
-        // }
+ // for(int i = 0; i<digits;)
