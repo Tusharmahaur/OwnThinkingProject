@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
+float g = 9.8;
 
 double angularVelocity(){
     int n;
@@ -25,8 +26,17 @@ double angularAccelaration(){
     return r*temp*temp;
 }
 
+double timePeriod(){
+    double l;
+    int theta;
+    cout<<"Enter the Length of Rope(in meter) and Angle(in degree) = ";
+    cin>>l>>theta;
+    return 2*M_PI*sqrt((l*cos(theta*M_PI/180))/g);
+}
+
 
 int main(){
-    cout<<"Angular Accelaration = "<<angularAccelaration()<<endl;
-    return 0;
+    
+    cout<<"Time Period = "<<timePeriod()<<" sec"<<endl;
+    return 0;   
 }
