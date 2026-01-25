@@ -87,12 +87,12 @@
 // }
 
 
-//These function is final output to calculate digital sum in any number 
+//This program to converting any number to digital sum for mathematical approach 
 #include <iostream>
 using namespace std;
 
-int counter(int num){
-    //For counting number of digits
+//these function for the counting the digits and use call by value
+int counter(long long int num){
     int count = 0;
     int digitSum = 0;
     while(num>0){
@@ -109,7 +109,9 @@ int main(){
     cin>>num;
     int count = counter(num);
     
+    
     long long int digitalSum = 0;
+    //two condition of this approach to when the counter is one or other case when counter is run more than one times.
     if(count>1){
         long long int arr[count];
 
@@ -119,11 +121,7 @@ int main(){
             num = num/10;
         }
 
-        //for printing 
-        for(int i =0; i<count; i++){
-            cout<<arr[i]<<" ";
-        }
-
+        //this loop run to count-1 times 
         for(int i = 0 ; i<count-1 ; i++)
         {
             arr[i+1] = arr[i] + arr[i+1];
