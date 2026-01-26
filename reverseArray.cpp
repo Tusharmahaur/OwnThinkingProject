@@ -1,5 +1,5 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <cmath>
 using namespace std;
 
 void linearSearch(int arr[]){
@@ -23,6 +23,7 @@ void linearSearch(int arr[]){
     }
 
 }
+
 int main(){
     int arr[] = {2,3,4,-90,34,1,32,43,53,2,43};
     
