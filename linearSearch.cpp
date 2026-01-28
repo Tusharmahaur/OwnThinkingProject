@@ -49,8 +49,6 @@ class Solution{
 int main(){
     vector <int> nums = {1,5,4,6,7,5,2,6,7};
     Solution T;
-
     cout<<"Your target = "<<T.target(nums,2)<<endl;
-
     return 0;
 }
