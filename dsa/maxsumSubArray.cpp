@@ -11,10 +11,10 @@
 //             for(int st = 0; st<nums.size(); st++){
 //                 int currSum = 0;
 //                 for(int end = st; end<nums.size(); end++){
-//                      currSum += nums[end];
+//                      currSum = currSum + nums[end];
 //                     maxSum = max(currSum, maxSum);//function for comparing is greater than subarray
 //                 }
-//             }
+//             } 
 //             return maxSum;
 //         }
 // };
@@ -50,7 +50,7 @@ class Solution{
 };
 
 int main(){
-    vector <int> nums  = {3,-4,5,4,-1,7,-8};
+    vector <int> nums  = {3,7,-8};
     Solution T;
     cout<<"\nYour maximum sum of Sub array = "<<T.subArraySum(nums)<<endl;
     return 0;

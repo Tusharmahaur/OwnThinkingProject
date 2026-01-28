@@ -33,7 +33,7 @@
 using namespace std;
 
 vector<int> pairsum(vector<int> nums,int target){
-    vector <int> ans;
+    vector<int> ans;
     int n = nums.size();
 
     int i = 0, j = n-1;
@@ -55,9 +55,11 @@ vector<int> pairsum(vector<int> nums,int target){
 }
 
 int main(){
-    vector<int> nums = {2,7,11,15};
-    int target = 26;
+    vector<int> nums = {2,7,10,11,13,15,65,78};
+    int target ;
+    cout<<"Enter the target : ";
+    cin>>target;
 
     vector<int> ans = pairsum(nums,target);
-    cout<<ans[0]<<" , "<<ans[1]<<endl;
+    cout<<ans[0]<<" , "<<ans[1]<<endl;//because ans hold only two values
 }

@@ -1,4 +1,4 @@
-//time complexity O(n^2)
+// //time complexity O(n^2)
 // #include <iostream>
 // #include <vector>
 // using namespace std;
@@ -6,7 +6,6 @@
 // class Solution{
 //     public:
 //         //member function 
-
 //         int majorityElement(vector<int> &nums){
 
 //             int n = nums.size();
@@ -31,13 +30,12 @@
 //         Solution T;
 //         vector<int> nums = {1,1,2,2,2,4,2,2,4};
 //         cout<<"your majority element = "<<T.majorityElement(nums)<<endl;
-
 //     return 0;
 // }
 
 
 
-//timecomplexity nlogn <n^2
+//timecomplexity nlogn
 // #include <iostream>
 // #include <vector>
 // #include <algorithm>
@@ -51,7 +49,7 @@
 //             int n = nums.size();
             
 //             //first step shorting 
-//             sort(nums.begin(),nums.end());
+//             sort(nums.begin(),nums.end());//this time complexity is nlogn
 //             //frequency count
 //             int freq = 1,ans = nums[0];//second step frequency declaration
 //             for(int i= 1; i<n; i++){
@@ -87,6 +85,7 @@ using namespace std;
 class Solution{
     public:
         //member function 
+        //Simple approach travel all vector and if next nums are same as befor than frequency++ other wise reset the frequency;
 
         int majorityElement(vector<int> &nums){
             int freq = 0,ans = 0;
@@ -109,7 +108,6 @@ int main(){
         Solution T;
         vector<int> nums = {1,1,2,2,2,4,2,2,4};
         cout<<"your majority element = "<<T.majorityElement(nums)<<endl;
-
     return 0;
 }
 
