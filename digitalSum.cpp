@@ -155,7 +155,7 @@ int64_t counter(int64_t num){
 }
 
 int main(){
-    int64_t num;
+    int64_t num;  
     cout<<"Enter the number : ";
     cin>>num;
     int64_t digits = counter(num);
