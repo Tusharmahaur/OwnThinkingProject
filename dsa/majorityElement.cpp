@@ -108,7 +108,7 @@ int main(){
         Solution T;
         vector<int> nums = {1,1,2,2,2,4,2,2,4};
         cout<<"your majority element = "<<T.majorityElement(nums)<<endl;
-    return 0;
+     return 0;
 }
 
 

@@ -139,46 +139,97 @@
 // }
 
 //for better approach use vector to digital sum 
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int64_t counter(int64_t num){
+//     int32_t count = 0;
+//     int digiSum = 0;
+//     while(num>0){
+//         digiSum += num%10;
+//         num = num/10;
+//         count++;
+//     }
+//     return count;
+// }
+
+// int main(){
+//     int64_t num;  
+//     cout<<"Enter the number : ";
+//     cin>>num;
+//     int64_t digits = counter(num);
+//     vector <int> vec;
+    
+//     int temp = 0;
+
+//     for(int i = 0; i<digits;i++){
+//         temp = num%10;
+//         num = num/10;
+//         vec.push_back(temp);
+//     }
+    
+//     int tempDigi = 0;
+//     for(int i = 0;i<digits; i++){
+//         vec[i+1] = vec[i]+vec[i+1];
+//         if(vec[i+1]>9){
+//             vec[i+1] = vec[i+1]%9;
+//         }
+//         tempDigi = vec[i+1];
+//     }
+
+//     cout<<"Digital Sum = "<<tempDigi<<endl;
+//     return 0;
+// }
+    
 #include <iostream>
 #include <vector>
 using namespace std;
 
-int64_t counter(int64_t num){
-    int32_t count = 0;
-    int digiSum = 0;
-    while(num>0){
-        digiSum += num%10;
-        num = num/10;
-        count++;
-    }
-    return count;
-}
+class Solution{
+    public:
+        int64_t num;
+        vector <int> nums;
+        //counstructor for one time calling 
+        Solution (){
+            cout<<"Enter the number : ";
+            cin>>num;
+            this -> num = num;
+
+            //assigning the vector
+            for(int i = 0; i <num; i++){
+                int temp = num%10;
+                num = num/10;
+                nums.push_back(temp);
+            }
+        }
+        
+        void print(void){
+            for(int val: nums){
+                cout<<val<<" ";
+            }
+        }
+        
+        //member function 
+        int digiSum = 0;
+        int digitalSum(vector<int>&nums){
+            for(int i = 0; i<nums.size()-1; i++){
+                nums[i+1] = nums[i]+nums[i+1];
+                if(digiSum >9){
+                    digiSum = digiSum%9;
+                }
+                digiSum = nums[i+1];
+            }
+            return digiSum;
+        }
+
+};
 
 int main(){
-    int64_t num;  
-    cout<<"Enter the number : ";
-    cin>>num;
-    int64_t digits = counter(num);
-    vector <int> vec;
-    
-    int temp = 0;
-
-    for(int i = 0; i<digits;i++){
-        temp = num%10;
-        num = num/10;
-        vec.push_back(temp);
-    }
-    
-    int tempDigi = 0;
-    for(int i = 0;i<digits; i++){
-        vec[i+1] = vec[i]+vec[i+1];
-        if(vec[i+1]>9){
-            vec[i+1] = vec[i+1]%9;
-        }
-        tempDigi = vec[i+1];
-    }
-
-    cout<<"Digital Sum = "<<tempDigi<<endl;
+    Solution T;
+    vector <int>nums;
+    print();
+    cout<<"Your digital sum = "<<T.digitalSum(nums)<<endl;
     return 0;
 }
-    
+
