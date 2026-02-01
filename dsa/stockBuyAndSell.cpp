@@ -15,7 +15,6 @@ class Solution{
                 bestBuy = min(bestBuy,prices[i]);
             }
             return maxProfit;
-
         }
 };
 
