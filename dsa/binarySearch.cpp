@@ -74,3 +74,30 @@
 //mid = st + (end-st)/2; that formula to resolve this problem
 
 //binary Search using recursion 
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// int binarySearch(vector<int>&nums,int tar, int st, int end){
+//         if(st <= end){
+//             int mid = st+(end-st)/2;
+
+//             if(tar>nums[mid]){
+//                 return binarySearch(nums,tar,mid+1,end);
+//             }else if(tar<nums[mid]){
+//                 return binarySearch(nums,tar,st,mid-1);
+//             }else{
+//                 return mid;
+//             }
+//         }
+//         return -1;
+//     }
+
+// int main(){
+//     vector<int> nums = {-1,0,3,4,5,9,12};
+//     int tar= 4;
+
+//     cout<<binarySearch(nums,tar)<<endl;
+//     return 0;
+// }
