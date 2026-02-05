@@ -55,7 +55,7 @@ vector<int> pairsum(vector<int> nums,int target){
 }
 
 int main(){
-    vector<int> nums = {2,7,10,11,13,15,65,78};
+    vector<int> nums = {2,1,4,7,5,2,6};
     int target ;
     cout<<"Enter the target : ";
     cin>>target;
@@ -63,3 +63,54 @@ int main(){
     vector<int> ans = pairsum(nums,target);
     cout<<ans[0]<<" , "<<ans[1]<<endl;//because ans hold only two values
 }
+
+// #include <iostream>
+// #include <vector>
+// using namespace std;
+
+// class Solution{
+//     public: 
+//         vector<int> PairSum(vector<int>&nums,int &target){
+//             vector<int> index;
+//             int st = 0, end = nums.size();
+//             int sum = 0;
+
+//             while(st<nums.size()){
+//                 int mid = st+ (end-st)/2;
+//                 if(mid>target) return index;
+
+//                 if((nums[mid]+nums[mid+1])== target){
+//                     index.push_back(mid);
+//                     index.push_back(mid+1);
+//                     return index;
+//                 }else if((nums[mid]+nums[mid-1]) == target){
+//                     index.push_back(mid-1);
+//                     index.push_back(mid);
+//                     return index;
+
+//                 }else{
+
+//                     if((nums[mid]+nums[mid+1])>target){
+//                         st = mid+1;
+//                     }
+
+//                     if((nums[mid]+nums[mid-1])<target){
+//                         end = mid-1;
+//                     } 
+//                 }
+//             }
+            
+//         }
+
+// };
+
+// int main(){
+//     Solution T;
+//     vector<int> nums = {2,7,11,13};
+//     int target = 16;
+//     vector<int> index = T.PairSum(nums,target);
+//     for(int val: index){
+//         cout<<val<<" ";
+//     }
+//     return 0;
+// }                      
