@@ -1,5 +1,5 @@
 #include <iostream>
-#include <bits/stdc++.h>
+// #include <bits/stdc++.h>
 using namespace std;
 
 int main(){
@@ -24,6 +24,7 @@ int main(){
     getline(cin,str,'.');// where is '.' is delimiter to stoping cin>> the value in the string and also used for const char arr[]
     cout<<str<<endl;
     cout<<sizeof(str)<<endl;
+    cout<<str[3]<<endl;
 
 
     return 0;
