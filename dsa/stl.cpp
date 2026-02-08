@@ -181,3 +181,58 @@
      
 //     return 0;
 // }
+
+// #include <iostream>
+// #include <map>
+// using namespace std;
+
+// int main(){
+//     map<string,long long    int> m = {
+//         {"html",111},
+//         {"Tv",50},
+//         {"phone",100},
+//         {"Number",1000}
+//     };
+
+//     m.insert({"camera",20});
+//     // m["No"] = 8279684396;
+//     m.erase("camera");
+//     // cout<<m["Tv"]<<endl;
+//     // cout<<m["No"] <<endl;
+//     // cout<<sizeof(m)<<endl;
+//     for(auto k: m){//print for lexicographically for keys alphabatically 
+//         cout<<k.first<<" : "<<k.second<<endl;
+//     }
+
+    
+//     cout<<"count = "<<m.count("html")<<endl;
+//     if(m.find("camera") != m.end()){
+//         cout<<"found"<<endl;
+//     }else{
+//         cout<<"not found"<<endl;
+//     }
+
+//     return 0;
+// }
+
+
+ #include <iostream>
+ #include <set>
+ using namespace std;
+ 
+ int main(){
+    set<int> st;//set me frequency repete nahi hoti hai and time complexity O(logn) hoti hai 
+    st.insert(1);
+    st.insert(2);
+    st.insert(3);
+
+
+    cout<<"lower bound = "<<*(st.lower_bound(3))<<endl;//ise dereferencing karna padega kyuki ye ek iterator hai 
+    //*(lower_bound(3)) value should not be less than key
+    cout<<"Upper bound = "<<*(st.upper_bound(3))<<endl;
+    //*(upper_bound(3)) value always greater than key
+    for(auto v: st){
+        cout<<v<<" ";
+    }
+    return 0;
+ }
