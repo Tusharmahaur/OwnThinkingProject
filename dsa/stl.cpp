@@ -216,23 +216,50 @@
 // }
 
 
- #include <iostream>
- #include <set>
- using namespace std;
+//  #include <iostream>
+//  #include <set>
+//  #include <unordered_set>
+//  using namespace std;
  
- int main(){
-    set<int> st;//set me frequency repete nahi hoti hai and time complexity O(logn) hoti hai 
-    st.insert(1);
-    st.insert(2);
-    st.insert(3);
+//  int main(){
+//     unordered_set<int> st;//set me frequency repete nahi hoti hai and time complexity O(logn) hoti hai 
+//     // multiset<int> st;//ascending order me data arrange hota hai 
+
+//     st.insert(1);
+//     st.insert(2);
+//     st.insert(3);
+//     st.insert(1);
+//     st.insert(2);
+//     st.insert(3);
 
 
-    cout<<"lower bound = "<<*(st.lower_bound(3))<<endl;//ise dereferencing karna padega kyuki ye ek iterator hai 
-    //*(lower_bound(3)) value should not be less than key
-    cout<<"Upper bound = "<<*(st.upper_bound(3))<<endl;
-    //*(upper_bound(3)) value always greater than key
-    for(auto v: st){
-        cout<<v<<" ";
+//     // cout<<"lower bound = "<<*(st.lower_bound(3))<<endl;//ise dereferencing karna padega kyuki ye ek iterator hai 
+//     // //*(lower_bound(3)) value should not be less than key
+//     // cout<<"Upper bound = "<<*(st.upper_bound(3))<<endl;
+//     // //*(upper_bound(3)) value always greater than key
+//     for(auto v: st){
+//         cout<<v<<" ";
+//     }
+//     return 0;
+//  }
+
+//algorithm
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    // int arr[6] = {1,5,7,6,2,4};
+    // sort(arr,arr+6);  
+    vector<pair<int,int>> v = {
+        {1,2},
+        {4,3},
+        {5,6},
+        {7,8}
+    };
+    sort(v.begin(),v.end());
+    for(auto p: v){
+        cout<<p.first<<" : "<<p.second<<endl;
     }
     return 0;
- }
+}
