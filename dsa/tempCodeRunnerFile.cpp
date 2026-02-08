@@ -1,1 +1,1 @@
-unordered_set<int> st;//set m
+char str[] = {'a','b','c','\0'};
