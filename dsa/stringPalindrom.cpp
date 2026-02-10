@@ -1,5 +1,5 @@
 #include <iostream>
-#include <bits/stdc++.h>
+#include <cctype>//for isalnum() function they are inbuilt function for check the character is alpha numaric or not     
 using namespace std;
 
 class Solution{
@@ -12,7 +12,7 @@ class Solution{
         bool isPalindrom(string s){
             int st = 0, end = s.length()-1;
             while(st<=end){
-                if(!isAlpha(s[st])){
+                if(!isalnum(s[st])){
                     st++; continue;
                 }
                 if(!isAlpha(s[end])){
