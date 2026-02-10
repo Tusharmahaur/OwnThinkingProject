@@ -30,21 +30,46 @@
 //     return 0;
 // }
 
+// #include <iostream>
+// #include <bits/stdc++.h>    
+// using namespace std;
+
+// int main(){
+//     string a = "welcomeWorld";
+    
+//     cout<<sizeof(a)<<endl;
+//     cout<<a.length()<<endl;
+//     return 0;
+// }
+
 #include <iostream>
-#include <bits/stdc++.h>    
+#include <algorithm>
+
 using namespace std;
 
-int main(){
-    string a = "welcomeWorld";
-    int row;
-    cout<<"Enter the number of row : ";
-    cin>>row;
-    cout<<sizeof(a)<<endl;
-    for(int i = 0; i<=6; i++){
-        for(int j = i; j <row; j++){
-            cout<<endl;
-        }
-        cout<<a[i]<<" ";
-    }
+bool isPalindrom(string str){
+    reverse(str.begin(),str.end());
+}
+
+int main(){//first case when have a char array
+    // char str[] = {'h','e','l','l','o','\0'};
+    //     int st = 0,end = sizeof(str)/sizeof(str[0])-1;
+
+    //     while(st<end){
+    //         swap(str[st++],str[end--]);
+    //     }
+
+    //     for(char val : str){
+    //         cout<<val<<" ";
+    //     }
+
+    //second case when have string 
+    string str = "racecar";
+    
+    cout<<isPalindrom(str)<<endl;
+
+    
+    
+
     return 0;
 }
