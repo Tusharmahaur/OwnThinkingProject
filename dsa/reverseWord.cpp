@@ -8,32 +8,31 @@ using namespace std;
 class Solution{
     public:
         string reverseWord(string s){
-            int n = s.length();
-            string ans = "";
+            int n = s.length();//for the length of string 
+            string ans = "";//for space on the answer 
 
             reverse(s.begin(), s.end()); // for the reverse entire string 
-            for(int i = 0; i<n; i++){
+            for(int i = 0; i<n; i++){ //for reversing individual word
                 string word = "";
                 while(i<n && s[i] != ' '){
                     word += s[i];
                     i++;
                 }
 
-                reverse(word.begin(),word.end());
-                if(word.length()>0){
+                reverse(word.begin(),word.end()); //for word is further reverse or original form to converted 
+                if(word.length()>0){ // this mean yadi word me alphabats hai to ans name ki string me space + original word ko store kara do 
                     ans += " "+ word;
                 }
             }
             return ans.substr(1); 
         }
-
 };
 
 int main(){
     Solution T;
     string str;
     cout<<"Enter the anything in the world : ";
-    getline(cin,str);
+    getline(cin,str,'.');
 
     cout<<T.reverseWord(str)<<endl;
     
