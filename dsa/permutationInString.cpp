@@ -2,15 +2,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution{
+class	Solution{
     public:
         
 
 };
 
+
 int main(){
     Solution T
-    vector<int> nums = {};
     
     return 0;
 }
