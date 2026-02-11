@@ -42,7 +42,7 @@ class Solution{
 
 int main(){
     Solution T;
-    string s1 = "eidabooo";
+    string s1 = "eidab  ooo";
     string s2 = "ab";
     cout<<T.checkInclusion(s1,s2)<<endl;
     if(T.checkInclusion(s1,s2)){
