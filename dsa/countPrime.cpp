@@ -26,7 +26,6 @@ int main(){
     int num;
     cout<<"Enter the number : ";
     cin>>num;
-    cout<<T.countPrime(num)<<endl;
-    
+    cout<<T.countPrime(num)<<endl;    
     return 0;
 }

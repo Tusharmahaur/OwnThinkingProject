@@ -123,6 +123,12 @@ class Solution{
             if(a == 0 ) return b;
             return a;   
         }
+
+        //for LCM
+        int lcm(int a, int b){
+           ;
+            return (a*b/gcd(a,b));
+        }
 };
 
 int main(){
@@ -130,6 +136,6 @@ int main(){
     int a,b;
     cout<<"Enter the number a and b respactivily : ";
     cin>>a>>b;
-    cout<<T.gcd(a,b)<<endl;
+    cout<<T.lcm(a,b)<<endl;
     return 0;
 }
