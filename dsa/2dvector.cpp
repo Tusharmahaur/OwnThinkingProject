@@ -7,9 +7,9 @@ class Solution{
     int maximumSumOf_Row(vector<vector<int>> &arr){
         int maxSum = INT_MIN;
         
-        for(int i = 0; i<3 ; i++){
+        for(int i = 0; i<arr.size() ; i++){
             int sum = 0;
-            for(int j =0 ; j<3 ; j++){
+            for(int j =0 ; j<arr.size() ; j++){
                 sum += arr[i][j];
             }
             maxSum = max(maxSum,sum);
