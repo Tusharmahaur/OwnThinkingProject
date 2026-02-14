@@ -20,14 +20,17 @@ class Solution{
             }
             return false;
         }
+
+        //main function 
         bool searchMatrix(vector<vector<int>> &matrix,int tar){
-            int m = matrix.size(), n = matrix[0].size();
+            int m = matrix.size(), n = matrix[1].size();
 
             int startRow = 0, endRow = m-1;
             
             while(startRow<=endRow){
                     int midRow = startRow+(endRow-startRow)/2;
 
+                    //these assigning for the rows like rows 1,2,3
                     if(tar >= matrix[midRow][0] && tar <= matrix[midRow][n-1]){
                         return searchInRow(matrix,tar, midRow);
                     }else if(tar >= matrix[midRow][n-1]){
@@ -52,6 +55,7 @@ int main(){
         {23,30,34,60}
     };
     
+    // cout<<nums[1].size()<<endl;
     if(T.searchMatrix(nums,target)){
         cout<<"True"<<endl;
     }else{
