@@ -28,41 +28,38 @@
 //     return 0;
 // }
 
-#include <iostream>
-#include <vector>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
 
-vector<int> pairsum(vector<int> nums,int target){
-    vector<int> ans;
-    int n = nums.size();
+// vector<int> pairsum(vector<int> nums,int target){
+//     int n = nums.size();
 
-    int i = 0, j = n-1;
+//     int i = 0, j = n-1;
 
-    while(i<j){
-        int pairsum = nums[i] +nums[j];
-        if(pairsum>target){
-            j--;
-        }else if(pairsum<target){
-            i++;
-        }else{
-            ans.push_back(i);
-            ans.push_back(j);
-            return ans;
-        }
-    }
+//     while(i<j){
+//         int pairsum = nums[i] +nums[j];
+//         if(pairsum>target){
+//             j--;
+//         }else if(pairsum<target){
+//             i++;
+//         }else{
+//             return {i,j};
+//         }
+//     }
+//     return {-1,-1};
+// }
 
-    return ans;
-}
+// int main(){
+//     vector<int> nums = {1,2,4,5,7,6,8,1,45};
+//     int target ;
+//     cout<<"Enter the target : ";
+//     cin>>target;
 
-int main(){
-    vector<int> nums = {2,1,4,7,5,2,6};
-    int target ;
-    cout<<"Enter the target : ";
-    cin>>target;
-
-    vector<int> ans = pairsum(nums,target);
-    cout<<ans[0]<<" , "<<ans[1]<<endl;//because ans hold only two values
-}
+//     vector<int> ans = pairsum(nums,target);
+//     cout<<ans[0]<<" , "<<ans[1]<<endl;//because ans hold only two values
+//     return 0;
+// }
 
 // #include <iostream>
 // #include <vector>
@@ -113,4 +110,43 @@ int main(){
 //         cout<<val<<" ";
 //     }
 //     return 0;
-// }                      
+// } 
+
+//using hashing concept 
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        vector<int> pairSum(vector<int>&nums,int tar){
+            unordered_map<int,int> m;
+            
+            for(int i = 0; i<nums.size(); i++){
+                int first = nums[i];
+                int sec = tar - first;
+
+                if(m.find(sec) != m.end()){
+                    // ans.push_back(i);
+                    // ans.push_back(m[sec]);
+                    return {m[sec],i};
+                }
+                m[first] = i;
+            }
+
+        }
+
+};
+
+int main(){
+    Solution T;
+    vector<int> nums = {3,2,4};
+    int target;
+    cout<<"Enter the target : ";
+    cin>>target;
+    vector<int> ans = T.pairSum(nums,target);
+    for(int v: ans){
+        cout<<v<<",";
+    }
+    return 0;
+}   
