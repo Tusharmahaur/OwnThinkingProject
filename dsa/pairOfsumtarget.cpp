@@ -127,12 +127,12 @@ class Solution{
                 int sec = tar - first;
 
                 if(m.find(sec) != m.end()){
-                    // ans.push_back(i);
-                    // ans.push_back(m[sec]);
+                    
                     return {m[sec],i};
                 }
                 m[first] = i;
             }
+            
 
         }
 

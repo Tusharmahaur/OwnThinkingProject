@@ -42,34 +42,33 @@
 //     return 0;
 // }
 
-#include <iostream>
-#include <algorithm>
+// #include <iostream>
+// #include <algorithm>
+// using namespace std;
 
-using namespace std;
+// bool isPalindrom(string str){
+//     reverse(str.begin(),str.end());
+// }
 
-bool isPalindrom(string str){
-    reverse(str.begin(),str.end());
-}
+// int main(){//first case when have a char array
+//     char str[] = {'h','e','l','l','o','\0'};
+//         int st = 0,end = sizeof(str)/sizeof(str[0])-1;
 
-int main(){//first case when have a char array
-    // char str[] = {'h','e','l','l','o','\0'};
-    //     int st = 0,end = sizeof(str)/sizeof(str[0])-1;
+//         while(st<end){
+//             swap(str[st++],str[end--]);
+//         }
 
-    //     while(st<end){
-    //         swap(str[st++],str[end--]);
-    //     }
+//         for(char val : str){
+//             cout<<val<<" ";
+//         }
 
-    //     for(char val : str){
-    //         cout<<val<<" ";
-    //     }
-
-    //second case when have string 
-    string str = "racecar";
+//     //second case when have string 
+//     // string str = "racecar";
     
-    cout<<isPalindrom(str)<<endl;
+//     // cout<<isPalindrom(str)<<endl;
 
     
     
 
-    return 0;
-}
+//     return 0;
+// }
