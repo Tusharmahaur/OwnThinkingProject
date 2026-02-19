@@ -72,3 +72,31 @@
 
 //     return 0;
 // }
+
+
+#include <iostream>
+using namespace std; 
+
+int main(){
+    string str = "forGeeks";
+    string s = "Geeks";
+    cout<<str + s<<endl; //+ operator and .append() method is usefull 
+
+    str.append(s);
+    cout<<str<<endl;
+                     //first 3 for str one ke liye 5 tak and s to 0 se 4 tak comparision ke liye   
+    cout<<str.compare(3,5,s,0,4)<<endl;
+
+    //for sub string ke liye
+    // substr(pos, len);
+    cout<<s.substr(0,2)<<endl;//output Ge
+
+    cout<<s.find("Geek")<<endl;//they are print first element position only
+
+    // Replaces 3 character from 0th index of
+    // str with 3 copies of '!'
+    cout<<str.replace(0, 3, 5, '!')<<endl;
+    cout<<(int)10.12<<endl;
+
+    return 0;
+}

@@ -20,7 +20,7 @@ class Solution{
 
 };
 
-int main(){
+int main()
     Solution T;
     int arr[3][3] = {
         {1,2,3},
@@ -31,4 +31,3 @@ int main(){
     cout<<T.maximumSumOf_Row(arr)<<endl;
     
     return 0;
-}

@@ -86,7 +86,7 @@ class Solution{
 
 int main(){
     Solution T;
-    vector <int> nums = {0,3,4,7,9,5,2};
+    vector <int> nums = {0,3,4,7,9,5,10};
     cout<<"Your peak element is : "<<T.peakEle(nums)<<endl;
     return 0;
 }
