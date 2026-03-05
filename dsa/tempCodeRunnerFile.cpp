@@ -129,3 +129,107 @@
     
 //     return 0;
 // }   
+
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution{
+//     public:
+//         vector<int> sort(vector<int> &nums){
+//             int select = INT_MIN;
+//             for(int i; i<nums.size(); i++){
+//                 if(select > nums[i]){
+                    
+//                 }else if(select)
+//             }
+//             return nums;
+//         }
+// };
+
+// int main(){
+//     Solution T;
+//     vector<int> nums = {1,2,4,8,5,3,9};
+    
+//     return 0;
+// }
+
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution{
+//     public:
+//         vector<int> shuffle(vector<int>& nums, int n) {
+//         vector<int> x;
+//         vector<int> ans;
+        
+//         for(int i = 0; i<nums.size(); i++){
+//             if(n>=i){
+//                 x.push_back(nums[i]);
+//             }else{
+//                 ans.push_back(nums[i]);
+//             }
+//         }
+
+//         for(int i = 0; i<nums.size() ; i++){
+//             if(i%2 == 0){
+//                 nums[i] = ans[i];
+//             }else{
+//                 nums[i] = x[i];
+//             }
+            
+//         }
+//         return nums;
+        
+//     }
+
+// };
+
+// int main(){
+//     Solution T;
+//     vector<int> nums = {1,2,4,5,7,9};
+//     vector<int> ans = T.shuffle(nums,3);
+//     for(int v: ans){
+//         cout<<v<<" ";
+//     }
+//     return 0;
+// }
+// #include <iostream>
+// #include <string> // Required for std::string
+// using namespace std;
+
+
+// int main() {
+//     string myString = "hello";
+//     int n  = 123;
+
+//     // Using length()
+//     cout << "Length using length(): " << myString.length()-1 << endl;
+//     cout << "Length using length(): " << myString.substr(3) << endl;
+//     cout << "Length using length(): " << to_string(n) << endl;
+//     cout<<sizeof(to_string(n))<<endl;
+
+//     // Using size()
+//     cout << "Length using size(): " << myString.size() << endl;
+
+//     return 0;
+// }
+
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int32_t main(){
+    int n = 10;
+    vector<string> board(n,string(n,'.'));
+
+    int i = 0; 
+    while(i<board.size()){
+        cout<<board[i]<<endl;
+        i++;
+    }
+
+    return 0; 
+}

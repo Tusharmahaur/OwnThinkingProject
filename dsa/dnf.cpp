@@ -10,7 +10,7 @@
 //     return 0;
 // }
 
-//using DNF = dutch national flag algorithm in linear complexity 
+//using DNF = dutch national flag algorithm in linear complexity O(n)
 
 #include <iostream>
 #include <vector>
