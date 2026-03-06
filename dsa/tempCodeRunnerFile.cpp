@@ -217,19 +217,78 @@
 // }
 
 
+// #include <iostream>
+// using namespace std;
+
+// int divide(int dividend, int divisor) {
+//     int count = 0; 
+//     if(dividend<divisor) return 0;
+//     if(divisor == 0 || dividend == 0) return 0;
+    
+//     while(dividend != 0 || dividend != 1){
+//         dividend  = dividend-divisor;
+//         count++;
+//     }
+//     return count;
+// }
+
+// int main(){
+//     divide(10,3);
+//     return 0;
+// }
+
+
+// #include <iostream>
+// #include <vector>
+// #include <set>
+// using namespace std;
+
+// int removeDuplicates(vector<int>& nums) {
+//     set<int> s;
+//     for(int i = 0; i<nums.size(); i++){
+//         s.insert(nums[i]);
+
+//     }
+//     cout<<s[0]<<endl;
+//     for(int ele: s){
+//         cout<<ele<<" ";
+//     }
+//     return s.size();
+// }
+
+// int main(){
+//     vector<int> nums = {0,0,1,1,1,2,2,2,2,3,3,4,4,5};
+//     cout<<endl<<removeDuplicates(nums);
+
+//     return 0;
+// };
+
+// #include <iostream>
+// #include <set>
+// using namespace std;
+
+// int main() {
+//     set<int> mySet = {10, 20, 30};
+//     // cout << mySet[1]; // ERROR: Random access not allowed
+    
+//     // Valid access:
+//     auto it = mySet.find(20);
+//     if (it != mySet.end()){ 
+//         cout << *it; 
+//     }// Output: 20
+//     return 0;
+// }
+
 #include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
 using namespace std;
 
 int32_t main(){
-    int n = 10;
-    vector<string> board(n,string(n,'.'));
+    vector<int> nums = {5,7,7,7,8,8};
+    int target = 7;
 
-    int i = 0; 
-    while(i<board.size()){
-        cout<<board[i]<<endl;
-        i++;
-    }
-
+    int startPoint = lower_bound(nums.begin(),nums.end(),target)-nums.begin();
+    int startPoint = upper_bound(nums.begin(),nums.end(),target)+nums.begin();
+    cout<<startPoint<<endl;
     return 0; 
 }
