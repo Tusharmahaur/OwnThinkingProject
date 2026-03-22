@@ -3,25 +3,22 @@
 // using namespace std;
 
 // int main(){
-//     vector<int> vec(3,10);// for similar values ke liye 
+//     vector<int> vec= {5,4,6};// for similar values ke liye 
 //     vec.push_back(1);
-//     // cout<<"capacity = "<<vec.capacity()<<endl;
-//     // cout<<"size = "<<vec.size()<<endl;
+//     cout<<"capacity = "<<vec.capacity()<<endl;
+//     cout<<"size = "<<vec.size()<<endl;
 
-//     // vec.erase(vec.begin());//that value had not print 
-//     // cout<<vec.front()<<endl; // these for printing the front value in the loop 
-//     // cout<<vec.back()<<endl; // these for printing the front value in the loop 
-//     // vec.insert(vec.begin()+1,40);//for vec.insert(position,element); direct position pass out nahi karte hai vec.begin()+2,1,3... ese pass karte hai 
+//     vec.erase(vec.begin());//that value had not print 
+//     cout<<vec.front()<<endl; // these for printing the front value in the loop 
+//     cout<<vec.back()<<endl; // these for printing the front value in the loop 
+//     vec.insert(vec.begin()+1,40);//for vec.insert(position,element); direct position pass out nahi karte hai vec.begin()+2,1,3... ese pass karte hai 
 //     // vec.clear(); //ye element ko remove kar deta hai but capacity utni hi rahti hai 
-//     // cout<<"capacity = "<<vec.capacity()<<endl;
-//     // cout<<"Empaty = "<<vec.empty()<<endl; // for this boolean value true = 1;
+//     cout<<vec[1]<<endl;
+//     cout<<"capacity = "<<vec.capacity()<<endl;
+//     cout<<"Empaty = "<<vec.empty()<<endl; // for this boolean value true = 1;
 //     // //because *(vec.begin()) ek pointer hai 
-//     cout<<*(vec.begin())<<endl;//they point first index value 
-//     cout<<*(vec.end())<<endl;//they point last index to after that value so print a garbage value
-
-
-    
-    
+//     cout<<*(vec.begin())<<endl;//they point first index value they return a pointer
+//     cout<<*(vec.end()-1)<<endl;//they point last index to after that value so print a garbage value
 //     return 0;
 // }
 
@@ -44,7 +41,7 @@
 //         cout<<*(i)<<" ";
 //     } 
 
-//     cout<<endl<<l[2]<<endl;//error fatch
+//     // cout<<endl<<l[2]<<endl;//error fatch
 //     return 0;
 // }
 
@@ -127,13 +124,15 @@
 //     s.push(5);
 //     s.push(8);
     
-//     stack<int> s2;
-//     s2.swap(s);
 //     while(!s.empty()){//these condition now not run because all element are replace with
 //         cout<<s.top()<<endl;
 //         s.pop();//these condition for stop to occuring in infinite loop 
 //     }
-//     cout<<" s2 size : "<<s2.size()<<endl;
+
+    
+//     // stack<int> s2;
+//     // s2.swap(s);
+//     // cout<<" s2 size : "<<s2.size()<<endl;
 //     return 0;
 // }
 
@@ -152,7 +151,7 @@
     
 //     while(!q.empty()){//these condition now not run because all element are replace with
 //         cout<<q.front()<<" ";
-//         q.pop();//these condition for stop to occuring in infinite loop 
+//         // q.pop();//these condition for stop to occuring in infinite loop 
 //     }
      
 //     return 0;
@@ -175,10 +174,9 @@
 //     priority_queue<int> pq2;
     
 //     while(!pq.empty()){//these condition now not run because all element are replace with
-//         cout<<pq.top()<<endl;
+//         cout<<pq.top()<<" ";
 //         pq.pop();//these condition for stop to occuring in infinite loop 
 //     }
-     
 //     return 0;
 // }
 
@@ -187,7 +185,7 @@
 // using namespace std;
 
 // int main(){
-//     map<string,long long    int> m = {
+//     map<string,long long int> m = {
 //         {"html",111},
 //         {"Tv",50},
 //         {"phone",100},
@@ -200,10 +198,9 @@
 //     // cout<<m["Tv"]<<endl;
 //     // cout<<m["No"] <<endl;
 //     // cout<<sizeof(m)<<endl;
-//     for(auto k: m){//print for lexicographically for keys alphabatically 
+//     for(auto k: m/* or iterator k*/){//print for lexicographically for keys alphabatically 
 //         cout<<k.first<<" : "<<k.second<<endl;
 //     }
-
     
 //     cout<<"count = "<<m.count("html")<<endl;
 //     if(m.find("camera") != m.end()){
@@ -233,9 +230,9 @@
 //     st.insert(3);
 
 
-//     // cout<<"lower bound = "<<*(st.lower_bound(3))<<endl;//ise dereferencing karna padega kyuki ye ek iterator hai 
+//     // cout<<"lower bound = "<<*(st.lower_bound(0))<<endl;//ise dereferencing karna padega kyuki ye ek iterator hai 
 //     // //*(lower_bound(3)) value should not be less than key
-//     // cout<<"Upper bound = "<<*(st.upper_bound(3))<<endl;
+//     // cout<<"Upper bound = "<<*(st.upper_bound(1))<<endl;
 //     // //*(upper_bound(3)) value always greater than key
 //     for(auto v: st){
 //         cout<<v<<" ";
@@ -243,23 +240,24 @@
 //     return 0;
 //  }
 
-//algorithm
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
+// //algorithm
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
 
-int main(){
-    // int arr[6] = {1,5,7,6,2,4};
-    // sort(arr,arr+6);  
-    vector<pair<int,int>> v = {
-        {1,2},
-        {4,3},
-        {5,6},
-        {7,8}
-    };
-    sort(v.begin(),v.end());
-    for(auto p: v){
-        cout<<p.first<<" : "<<p.second<<endl;
-    }
-    return 0;
-}
+// int main(){
+//     // int arr[6] = {1,5,7,6,2,4};
+//     // sort(arr,arr+6);  
+//     vector<pair<int,int>> v = {
+//         {1,2},
+//         {4,3},
+//         {5,6},
+//         {7,8}
+//     };
+
+//     reverse(v.begin(),v.end());
+//     for(auto p: v){
+//         cout<<p.first<<" : "<<p.second<<endl;
+//     }
+//     return 0;
+// }
