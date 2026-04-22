@@ -21,6 +21,6 @@ class Solution{
 int main(){
     Solution T;
     vector<int> prices = {7,1,5,3,6,4};
-    cout<<"your maximum profit = "<<T.maxProfit(prices)<<endl;
+    cout<<T.maxProfit(prices)<<endl;
     return 0;
 }
