@@ -23,10 +23,10 @@ class Solution{
 int main(){
     Solution T;
     vector<vector<int>> nums = {
-        {1,2,3},
-        {4,5,6},
+        {1,210,3},
+        {4,50,6},
         {7,8,9}
     };
-    cout<<"your maxi row sum = "<<T.maximumSumOf_Row(nums)<<endl;
+    cout<<"your maximum row sum = "<<T.maximumSumOf_Row(nums)<<endl;
     return 0;
 }

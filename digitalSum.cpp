@@ -1,54 +1,54 @@
-// #include <iostream>
-// using namespace std;
+#include <iostream>
+using namespace std;
 
-// //Function declaration for converting to number in digital Sum
-// long long digitalSum(long long int num)
-// {   
-//     long long int digiSum = 0;
-//     //loop for sum all digits 
-//     while (num > 0) {
-//         digiSum += num % 10;
-//         num = num / 10;
-//     }
+//Function declaration for converting to number in digital Sum
+long long digitalSum(long long int num)
+{   
+    long long int digiSum = 0;
+    //loop for sum all digits 
+    while (num > 0) {
+        digiSum += num % 10;
+        num = num / 10;
+    }
 
-//     //for further sum when to output is single digits
-//     if(digiSum>0 && digiSum<=9){
-//         return digiSum;
-//     }else{
-//         //to converting further into single in number 
-//         long long int temp = 0;
-//         while (digiSum >0 ){
-//             temp = temp + digiSum%10;
-//             digiSum =digiSum/10;
-//         }
+    //for further sum when to output is single digits
+    if(digiSum>0 && digiSum<=9){
+        return digiSum;
+    }else{
+        //to converting further into single in number 
+        long long int temp = 0;
+        while (digiSum >0 ){
+            temp = temp + digiSum%10;
+            digiSum =digiSum/10;
+        }
         
-//         //further recheck in this number 
-//         if(temp>0 and temp<=9){
-//             return temp;
-//         }else{
-//             long long int temp1 = 0;
-//             while (temp >0 ){
-//                 temp1 = temp1 + temp%10;
-//                 temp =temp/10;
-//             }
-//         }
-//     }
-// }
+        //further recheck in this number 
+        if(temp>0 and temp<=9){
+            return temp;
+        }else{
+            long long int temp1 = 0;
+            while (temp >0 ){
+                temp1 = temp1 + temp%10;
+                temp =temp/10;
+            }
+        }
+    }
+}
 
-// int main()
-// {
-//     long long int num = 0;
-//     cout<<"Enter the number is : ";
-//     cin>>num;
-//     //To check the condition if fuction return 0 than print the value is 0 or 9
-//     if(digitalSum(num)== 0){
-//         cout<<"Your Digital Sum is : 0 or 9 "<<endl;
-//     }else{
-//         //other wise print the digital sum
-//     cout << "Your Digital Sum is : " <<digitalSum(num)<<endl;
-// }
-//     return 0;
-// }
+int main()
+{
+    long long int num = 0;
+    cout<<"Enter the number is : ";
+    cin>>num;
+    //To check the condition if fuction return 0 than print the value is 0 or 9
+    if(digitalSum(num)== 0){
+        cout<<"Your Digital Sum is : 0 or 9 "<<endl;
+    }else{
+        //other wise print the digital sum
+    cout << "Your Digital Sum is : " <<digitalSum(num)<<endl;
+}
+    return 0;
+}
 
 
 // //second logic to says jese hi two digit ho unko jod ke single digit kar do 
@@ -182,54 +182,54 @@
 //     return 0;
 // }
     
-#include <iostream>
-#include <vector>
-using namespace std;
+// #include <iostream>
+// #include <vector>
+// using namespace std;
 
-class Solution{
-    public:
-        int64_t num;
-        vector <int> nums;
-        //counstructor for one time calling 
-        Solution (){
-            cout<<"Enter the number : ";
-            cin>>num;
-            this -> num = num;
+// class Solution{
+//     public:
+//         int64_t num;
+//         vector <int> nums;
+//         //counstructor for one time calling 
+//         Solution (){
+//             cout<<"Enter the number : ";
+//             cin>>num;
+//             this -> num = num;
 
-            //assigning the vector
-            for(int i = 0; i <num; i++){
-                int temp = num%10;
-                num = num/10;
-                nums.push_back(temp);
-            }
-        }
+//             //assigning the vector
+//             for(int i = 0; i <num; i++){
+//                 int temp = num%10;
+//                 num = num/10;
+//                 nums.push_back(temp);
+//             }
+//         }
         
-        void print(void){
-            for(int val: nums){
-                cout<<val<<" ";
-            }
-        }
+//         void print(nums[]){
+//             for(int val: nums){
+//                 cout<<val<<" ";
+//             }
+//         }
         
-        //member function 
-        int digiSum = 0;
-        int digitalSum(vector<int>&nums){
-            for(int i = 0; i<nums.size()-1; i++){
-                nums[i+1] = nums[i]+nums[i+1];
-                if(digiSum >9){
-                    digiSum = digiSum%9;
-                }
-                digiSum = nums[i+1];
-            }
-            return digiSum;
-        }
+//         //member function 
+//         int digiSum = 0;
+//         int digitalSum(vector<int>&nums){
+//             for(int i = 0; i<nums.size()-1; i++){
+//                 nums[i+1] = nums[i]+nums[i+1];
+//                 if(digiSum >9){
+//                     digiSum = digiSum%9;
+//                 }
+//                 digiSum = nums[i+1];
+//             }
+//             return digiSum;
+//         }
 
-};
+// };
 
-int main(){
-    Solution T;
-    vector <int>nums;
-    print();
-    cout<<"Your digital sum = "<<T.digitalSum(nums)<<endl;
-    return 0;
-}
+// int main(){
+//     Solution T;
+//     vector <int>nums;
+//     print();
+//     cout<<"Your digital sum = "<<T.digitalSum(nums)<<endl;
+//     return 0;
+// }
 

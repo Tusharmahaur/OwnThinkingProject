@@ -35,8 +35,9 @@ class Solution{
 };
 
 int main(){ Solution T;
-    vector<int> nums= {-1,0,3,4,5,9,12};
-    int tar = -1;
+    vector<int> nums= {-1,0,3,4,9,5,12};
+    int tar = 5;
     cout<<"Your target is lies "<<T.search(nums,tar)<<" Index"<<endl;
     return 0;
 }
+

@@ -36,36 +36,40 @@
 
 
 
-#include <iostream>
-#include <bits/stdc++.h>
-using namespace std;
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
 
 
-int binarySearch(vector<int> nums,int target){
-    int st = 0, end = nums.size()-1;
+// int binarySearch(vector<int> nums){
+
+//     int st = 0, end = nums.size()-1;
                 
-    while(st<= end){
-        int mid =st+(end-st)/2;
+//         while(st <= end){
+//             int mid =st+(end-st)/2;
 
-        if(target>nums[mid]){
-            st = mid+1;
-        }else if(target<nums[mid]){
-            end = mid-1;
-        }else{
-            return mid;
-        }
-    }
-    return -1;
-}
+//             if(nums[mid+1]>nums[mid]){
+//                 st = mid+1;
+//             }else if(nums[mid+1]<nums[mid]){
+//                 end = mid-1;
+//             }else{
+//                 return mid;
+//             }
+//         }
+//     return -1;
+// }
 
-int main(){
+// int main(){
        
-        vector<int> nums = {1,2,3,5,9,12};//odd case
-        int target = 1;
-        cout<<"Your index = "<<binarySearch(nums,target)<<endl;
-    
-        return 0;
-    }
+//         vector<int> nums = {1,2,3,5,9,10,11,12,13,14,20,25,28,29,30,34,35,37,39,41};//odd case
+//         int target = 25;
+
+//         if(binarySearch(nums,target) == -1){
+//             cout<<"Your index is not found."<<endl;
+//         }else{
+//         cout<<"Your index = "<<binarySearch(nums,target)<<endl;}    
+//         return 0;
+//     }
     
 
 //to avoid overflow conditions like 
@@ -102,3 +106,36 @@ int main(){
 //     cout<<binarySearch(nums,tar)<<endl;
 //     return 0;
 // }
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+    int binarySearch(vector<int> nums){
+
+        int st = 0, end = nums.size();
+                    
+            while(st < end){
+                int mid =st+(end-st)/2;
+    
+                if(nums[mid-1]>nums[mid] && nums[mid]<nums[mid+1]){
+                    ;
+                }else if(nums[mid+1]<nums[mid]){
+                    end = mid-1;
+                }else{
+                    return mid;
+                }
+            }
+        return -1;
+    }
+
+};
+
+int main(){
+    Solution T;
+    vector<int> nums = {1,3,4,2};
+
+    
+    return 0;
+}
