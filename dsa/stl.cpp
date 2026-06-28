@@ -289,7 +289,7 @@ int main(){
     vector<int> nums = {0,1,0,1,0,1,99};
     vector<int> ans = T.twoSum(nums,100);
     for(int v: ans){
-        cout<<v<<" "
+        cout<<v<<" ";
     }
     return 0;
 }
