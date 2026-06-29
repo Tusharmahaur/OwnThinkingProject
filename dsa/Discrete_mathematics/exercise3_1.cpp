@@ -414,3 +414,148 @@
 //     cout<<"last even integer in this vector is : "<<T.lastEvenNumber(nums)<<endl;
 //     return 0;
 // }
+
+
+
+
+//Q.23 find onto function 
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution{
+//     public:
+//         bool findOnto(vector<pair<int,int>> &f){
+//             vector<int> setA ,setB;
+//             for(const auto &i : f){
+//                 setA.push_back(i.first);
+//                 setB.push_back(i.second);
+//             }
+
+//             for()
+        
+//         }
+
+// };
+
+// int main(){
+//     Solution T;
+//     vector<pair<int,int>> nums = {{1,1},{2,2},{3,3},{3,4}};
+    
+//     return 0;
+// }   
+
+
+
+
+// #include <iostream>
+// #include <vector>
+// #include <unordered_set>
+// using namespace std;
+
+// // Example math function to test: f(x) = x % 3
+// int myFunction(int x) {
+//     return x % 3;
+// }
+
+// // Function to check if the given mathematical function is onto
+// bool isOnto(int (*f)(int), const vector<int>& domain, const vector<int>& codomain) {
+//     unordered_set<int> actualOutputs;
+
+//     // 1. Pass every element of the domain through the function
+//     for (int x : domain) {
+//         actualOutputs.insert(f(x));
+//     }
+
+//     // 2. Check if every element of the codomain exists in the unique outputs
+//     for (int y : codomain) {
+//         if (actualOutputs.find(y) == actualOutputs.end()) {
+//             return false; // Found a codomain element with no pre-image
+//         }
+//     }
+
+//     return true; // All codomain elements were mapped
+// }
+
+// int main() {
+//     vector<int> domain = {0, 1, 2, 5};
+//     vector<int> codomain = {0, 1,5, 2};
+
+//     if (isOnto(myFunction, domain, codomain)) {
+//         cout << "The function is ONTO." << endl;
+//     } else {
+//         cout << "The function is NOT ONTO." << endl;
+//     }
+
+//     return 0;
+// }
+
+
+
+
+
+//Q.19 to find the maximum median in the three term 
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution{
+//     public:
+//         int findMaximumMeadian(vector<int> &n){
+//             int maxMeadian = 0; 
+
+//             for(int i = 0; i<n.size(); i++){
+//                 for(int j = i+1,k = i+2; j<n.size() && k<n.size(); j++,k++){
+//                     int Meadian = (n[i]+n[j]+n[k])/3;
+
+//                     maxMeadian = max(maxMeadian,Meadian);
+
+//                 }   
+//             }
+//             return maxMeadian;
+//         }
+// };
+
+// int main(){
+//     Solution T;
+//     vector<int> nums = {1,23,15,3,14,5,16,7,8,9,2,12,45,92};
+//     cout<<"Your max meadian is : "<<T.findMaximumMeadian(nums)<<endl;
+//     return 0;
+// }
+
+
+
+
+//Q.21 describe the algorithm to find
+#include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution{
+    public:
+        vector<vector<int>> findSequence(vector<int> &n){
+            vector<vector<int>> ans;
+            for(int i = 0; i<n.size(); i++){
+                if(n[i]<n[i+1] && n[i+1]<n[i+2]){
+                    ans.push_back({n[i],n[i+1],n[i+2]});
+                }
+            }
+            return ans;
+        }
+
+};
+
+int main(){
+    Solution T;
+    vector<int> nums = {1,4,5,9,8,6,3,4,5,2,6,4};
+    vector<vector<int>> ans = T.findSequence(nums);
+
+    for(const auto &v: ans){
+        cout<<" (";
+        for(int p : v){
+            cout<<p<<" ";
+        }
+        cout<<"), ";
+    }
+    return 0;
+}
