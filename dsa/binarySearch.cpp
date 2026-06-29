@@ -116,7 +116,7 @@ class Solution{
 
         int st = 0, end = nums.size();
                     
-            while(st < end){
+            while(st <  end){
                 int mid =st+(end-st)/2;
     
                 if(nums[mid-1]>nums[mid] && nums[mid]<nums[mid+1]){

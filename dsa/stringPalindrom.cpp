@@ -44,3 +44,44 @@ int main(){
 
     return 0;
 }
+
+
+
+// //method second and simple method 
+// #include <iostream>
+// #include <bits/stdc++.h>
+// using namespace std;
+
+// class Solution{
+//     public:
+//         bool isPalindrom(string str){
+//             int st = 0, end = str.size();
+
+//             while(st>=end){
+//                 if(str[st] == str[end]){
+//                     st++;
+//                     end--;
+//                 }else{
+//                     break;
+//                     return false;
+//                 }
+//             }
+//             return true;
+//         }
+
+// };
+
+// int main(){
+//     Solution T;
+//     string str;
+//     cout<<"Enter the string : ";
+//     getline(cin,str);
+    
+//     if(T.isPalindrom(str)){
+//         cout<<"\nYour string is palindrom";
+//     }else{
+//         cout<<"\nYour string has not a palindrom";
+//     }
+    
+//     return 0;
+// }
